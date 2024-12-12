@@ -71,6 +71,8 @@ chmod +x aitk
 
 Etapa 01:
  - [x] Configurar o Ai Commit 
+ - [x] Configurar o Ai Terminal Builder
+ - [x] Configurar extensão do Code GPT	
 
 
 Referencia:
