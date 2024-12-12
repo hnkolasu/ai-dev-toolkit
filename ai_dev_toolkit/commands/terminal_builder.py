@@ -7,6 +7,8 @@ from pydantic import BaseModel
 from ai_dev_toolkit.utils.misc.utils import get_operational_system
 import os
 
+model = os.getenv("MODEL")
+
 class CliResultType(BaseModel):
     command: str
 
@@ -27,7 +29,7 @@ class TerminalBuilderCommand(Command):
             
         )
         self.agent = Agent(
-        'groq:llama3-8b-8192', result_type=CliResultType, system_prompt=system_prompt)
+        model, result_type=CliResultType, system_prompt=system_prompt)
     
     def execute(self, request: str):
         try:
